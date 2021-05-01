@@ -1,0 +1,32 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /bookdeal
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    druid:
+      url: jdbc:mysql://sub-server.com/book?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useOldAliasMetadataBehavior=true&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+  #    static-path-pattern: /WEB-INF/img/**
+  resources:
+    static-locations: /WEB-INF/
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanqin.bookdeal.mapper.BookMapper">
+
+    <resultMap id="BaseResultMap" type="com.yanqin.bookdeal.domain.Book">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+            <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+            <result property="categoryId" column="category_id" jdbcType="INTEGER"/>
+            <result property="bookName" column="book_name" jdbcType="VARCHAR"/>
+            <result property="bookDesc" column="book_desc" jdbcType="VARCHAR"/>
+            <result property="author" column="author" jdbcType="VARCHAR"/>
+            <result property="publishHouse" column="publish_house" jdbcType="VARCHAR"/>
+            <result property="publishDate" column="publish_date" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="bookNumber" column="book_number" jdbcType="VARCHAR"/>
+            <result property="contentDesc" column="content_desc" jdbcType="VARCHAR"/>
+            <result property="authorDesc" column="author_desc" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,create_date,update_date,
+        category_id,book_name,book_desc,
+        author,publish_house,publish_date,
+        price,book_number,content_desc,
+        author_desc
+    </sql>
+</mapper>
